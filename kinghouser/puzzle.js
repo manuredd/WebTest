@@ -30,7 +30,7 @@ function getNextWord(a) {
     const end = Date.now
     const oneDay = 1000 * 60 * 60 * 24;
     const diffInTime = start.getTime() - end.getTime();
-    let index = Math.round(diffInTime / oneDay);
+    let index = Math.round(diffInTime / oneDay) * 2;
     return common_words[index + a]
 }
 
