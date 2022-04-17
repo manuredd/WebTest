@@ -13,7 +13,9 @@ function createPuzzle() {
         chars.push(wordTwo.charAt(i))
     }
     shuffleArray(chars)
-    console.log("hie")
+    for (let elements of chars.values()) {
+        console.log(elements)
+    }
     return chars
 }
 
@@ -32,7 +34,6 @@ function getNextWord(a) {
     const oneDay = 1000 * 60 * 60 * 24;
     const diffInTime = start.getTime() - end.getTime()
     let index = Math.abs(Math.round(diffInTime / oneDay))
-    console.log(index)
     return common_words[index + a]
 }
 

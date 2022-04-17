@@ -21,7 +21,7 @@ function fillLetters() {
     context.fillStyle = "black";
     context.font = "60px Rockwell";
     let letters = createPuzzle()
-    for (let i = 0; i < 5; i++) {
+    for (let i = 1; i < 5; i++) {
         context.fillText(letters[i], 57, 66 + i * boxHeight / 6)
     }
     for (let i = 6; i < 10; i++) {
