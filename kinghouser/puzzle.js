@@ -33,7 +33,7 @@ function getNextWord(a) {
     const diffInTime = end.getTime() - start.getTime()
     let index = Math.round(diffInTime / oneDay)
     console.log(index)
-    return common_words[index + a]
+    return common_words[a + index]
 }
 
 function isWord(word) {
