@@ -28,12 +28,12 @@ function shuffleArray(array) {
 
 function getNextWord(a) {
     const start = new Date("3/12/2022")
-    const end = new Date("3/17/2022")
+    const end = new Date("4/12/2022")
     const oneDay = 1000 * 60 * 60 * 24;
     const diffInTime = end.getTime() - start.getTime()
     let index = Math.round(diffInTime / oneDay)
-    console.log(index)
-    return common_words[a + index]
+    if (index === 0) return common_words[(2 * index) + a]
+    return common_words[(2 * (index - 1)) + a]
 }
 
 function isWord(word) {
