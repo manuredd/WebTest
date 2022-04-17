@@ -27,5 +27,5 @@ function fillLetters() {
     }
 }
 
-makeBoard();
-fillLetters();
+makeBoard()
+fillLetters()
