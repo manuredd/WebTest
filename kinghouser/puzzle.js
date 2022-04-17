@@ -13,6 +13,7 @@ function createPuzzle() {
         chars.push(wordTwo.charAt(i))
     }
     shuffleArray(chars)
+    console.log("hie")
     return chars
 }
 
@@ -27,10 +28,11 @@ function shuffleArray(array) {
 
 function getNextWord(a) {
     const start = new Date("3/12/2022")
-    const end = Date.now
+    const end = new Date("3/17/2022")
     const oneDay = 1000 * 60 * 60 * 24;
-    const diffInTime = start.getTime() - end.getTime();
-    let index = Math.round(diffInTime / oneDay) * 2;
+    const diffInTime = start.getTime() - end.getTime()
+    let index = Math.abs(Math.round(diffInTime / oneDay))
+    console.log(index)
     return common_words[index + a]
 }
 

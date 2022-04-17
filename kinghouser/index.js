@@ -19,12 +19,13 @@ function fillLetters() {
     const canvas = document.querySelector("canvas")
     const context = canvas.getContext("2d")
     context.fillStyle = "black";
-    context.font = "60px sans-serif";
+    context.font = "60px Rockwell";
+    let letters = createPuzzle()
     for (let i = 0; i < 5; i++) {
-        context.fillText("H", 57, 66 + i * boxHeight / 6)
+        context.fillText(letters[i], 57, 66 + i * boxHeight / 6)
     }
-    for (let i = 0; i < 5; i++) {
-        context.fillText("H", 57 + boxWidth / 2, 66 + i * boxHeight / 6)
+    for (let i = 6; i < 10; i++) {
+        context.fillText(letters[i], 57 + boxWidth / 2, 66 + i * boxHeight / 6)
     }
 }
 makeBoard();
