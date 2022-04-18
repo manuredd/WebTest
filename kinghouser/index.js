@@ -8,10 +8,10 @@ function makeBoard() {
     canvas.height = boxHeight
     canvas.width = boxHeight / 2
     for (let i = 0; i < 5; i++) {
-        context.strokeRect(33, (i * boxHeight / 6) + 1, squareDim, squareDim)
+        context.strokeRect(1, (i * boxHeight / 6) + 1, squareDim, squareDim)
     }
     for (let i = 0; i < 5; i++) {
-        context.strokeRect(boxWidth / 2 + 33, (i * boxHeight / 6) + 1, squareDim, squareDim)
+        context.strokeRect(boxWidth / 1.5, (i * boxHeight / 6) + 1, squareDim, squareDim)
     }
 }
 
@@ -22,8 +22,8 @@ function fillLetters() {
     context.font = "60px rockwell";
     let letters = createPuzzle()
     for (let i = 0; i <= 9; i++) {
-        if (i <= 4) context.fillText(letters[i], boxWidth / 6,  (i * boxHeight / 6) + boxHeight / 12)
-        else context.fillText(letters[i], 4 * boxWidth / 6, ((i - 5) * boxHeight / 6) + boxHeight / 12)
+        if (i <= 4) context.fillText(letters[i], boxWidth / 10,  (i * boxHeight / 6) + boxHeight / 12)
+        else context.fillText(letters[i], 7.7 * boxWidth / 10, ((i - 5) * boxHeight / 6) + boxHeight / 12)
     }
 }
 
