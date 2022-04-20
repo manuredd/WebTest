@@ -5,14 +5,13 @@ const common_words = [ "ocean","rumor","state","pansy","primo","stilt","igloo","
 ]
 
 function createPuzzle() {
-    let wordOne = getNextWord(0)
-    let wordTwo = getNextWord(1)
+    let wordOne = getWord(0)
+    let wordTwo = getWord(1)
     let chars = []
     for (let i = 0; i < 5; i++) {
         chars.push(wordOne.charAt(i))
         chars.push(wordTwo.charAt(i))
     }
-    console.log(wordOne + " " + wordTwo)
     shuffleArray(chars)
     return chars
 }
@@ -26,9 +25,9 @@ function shuffleArray(array) {
     }
 }
 
-function getNextWord(a) {
+function getWord(a) {
     const start = new Date("3/12/2022").getTime()
-    const end = Date.now()
+    const end = new Date("3/20/2022")
     const oneDay = 1000 * 60 * 60 * 24;
     const diffInTime = end - start
     let index = Math.round(diffInTime / oneDay)
@@ -71,3 +70,17 @@ function clearLocalStorage() {
 function removeItem(item) {
     localStorage.removeItem(item)
 }
+
+function fillSquares() {
+    let letters = createPuzzle()
+    for (let elements in letters.values()) {
+        console.log(elements)
+    }
+    for (let i = 1; i < 11; i++) {
+        const square = document.getElementById(i.toString())
+        square.textContent = letters[i - 1]
+        console.log(letters[i - 1])
+    }
+}
+
+fillSquares()
