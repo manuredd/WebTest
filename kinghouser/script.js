@@ -26,11 +26,10 @@ function shuffleArray(array) {
 }
 
 function getWord(a) {
-    const start = new Date("3/12/2022").getTime()
-    const end = new Date("3/20/2022")
-    const oneDay = 1000 * 60 * 60 * 24;
-    const diffInTime = end - start
-    let index = Math.round(diffInTime / oneDay)
+    const offsetFromDate = new Date(2022, 3, 12)
+    const msOffset = Date.now() - offsetFromDate
+    const dayOffset = msOffset / 1000 / 60 / 60 / 24
+    let index = Math.floor(dayOffset)
     if (index === 0) return common_words[(2 * index) + a]
     return common_words[(2 * (index - 1)) + a]
 }
@@ -73,14 +72,12 @@ function removeItem(item) {
 
 function fillSquares() {
     let letters = createPuzzle()
-    for (let elements in letters.values()) {
-        console.log(elements)
-    }
     for (let i = 1; i < 11; i++) {
         const square = document.getElementById(i.toString())
         square.textContent = letters[i - 1]
-        console.log(letters[i - 1])
     }
 }
 
-fillSquares()
+window.onload = function() {
+    fillSquares()
+};
