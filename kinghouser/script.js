@@ -74,7 +74,7 @@ function fillSquares() {
     let letters = createPuzzle()
     for (let i = 1; i < 11; i++) {
         const square = document.getElementById(i.toString())
-        square.textContent = letters[i - 1]
+        square.innerText = letters[i - 1]
     }
 }
 
