@@ -66,6 +66,21 @@ body {
     /* "flex-end" works better than "center" for some reason*/
 }
 
+.test-box {
+    display: flex;
+    position: center;
+    border: 2px solid black;
+    min-width: 80px;
+    min-height: 80px;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+
+    justify-content: center;
+    align-items: center;
+}
+
 .spacer-half {
     flex-grow: 0.5;
 }
