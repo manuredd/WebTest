@@ -34,6 +34,24 @@ function getWord(a) {
     return common_words[(2 * (index - 1)) + a]
 }
 
+function checkWords() {
+    let word = ""
+    for (let i = 1; i < 11; i++) {
+        const square = document.getElementById(i.toString())
+        if (i === 5) {
+            word = word.concat(square.textContent)
+            word = word.concat(" ")
+        } else word = word.concat(square.textContent)
+    }
+    word = word.split(" ")
+    console.log(word) // delete later
+    for (let i = 0; i < 2; i++) {
+        if (isWord(word[i])) {
+            console.log("hie") // we will add "correct!" and green boxes
+        } else console.log("bie") // we will add "incorrect:(" and red boxes
+    }
+}
+
 function isWord(word) {
     return words.filter(e => e.Name === word).length > 0
 }
@@ -80,4 +98,5 @@ function fillSquares() {
 
 window.onload = function() {
     fillSquares()
+    checkWords() //delete later
 };
