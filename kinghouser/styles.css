@@ -1,14 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html,
-body {
-    height: 100%;
-    font-family: "Rockwell", serif;
-}
-
 #container {
     display: flex;
     background-color: white;
@@ -51,7 +40,8 @@ body {
 }
 
 .square {
-    border: 2px solid rgb(58, 58, 60);
+    display: flex;
+    border: 2px solid black;
     min-width: 80px;
     min-height: 80px;
     font-size: 3rem;
@@ -61,10 +51,5 @@ body {
 
     justify-content: center;
     align-items: center;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.spacer-half {
-    flex-grow: 0.5;
+    font-family: "Rockwell", serif;
 }
