@@ -1,3 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Rockwell", serif;
+}
+
 #container {
     display: flex;
     background-color: white;
@@ -18,7 +29,7 @@
     color: black;
     font-size: 3.0rem;
     font-weight: bold;
-    margin: 1.0rem 0 0.4rem 0;
+    margin: 1.8rem 0 0.4rem 0;
     text-align: center;
     font-family: "Rockwell", serif;
 }
@@ -34,14 +45,14 @@
 #board {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+    grid-row-gap: 15px;
+    grid-column-gap: 60px;
     padding: 10px;
     box-sizing: border-box;
 }
 
 .square {
-    display: flex;
-    border: 2px solid black;
+    border: 2px solid rgb(58, 58, 60);
     min-width: 80px;
     min-height: 80px;
     font-size: 3rem;
@@ -49,7 +60,12 @@
     color: black;
     text-transform: uppercase;
 
+    display: flex;
     justify-content: center;
-    align-items: center;
-    font-family: "Rockwell", serif;
+    align-items: flex-end;
+    /* "flex-end" works better than "center" for some reason*/
+}
+
+.spacer-half {
+    flex-grow: 0.5;
 }

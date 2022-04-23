@@ -1,0 +1,7 @@
+- center letters inside squares
+- swap letters (drag and drop?)
+- animation when swapping letters
+- how to play window and button when accessing website for first time
+- check button for correct words or auto check?
+- add color when correct or incorrect
+- hard mode (only limited amount of swaps?)
