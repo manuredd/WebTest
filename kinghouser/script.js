@@ -46,7 +46,7 @@ function checkWords() {
     word = word.split(" ")
     console.log(word) // delete later
     for (let i = 0; i < 2; i++) {
-        if (isWord(word[i])) {
+        if (word[i] === getWord(0) || word[i] === getWord(1))  {
             console.log("hie") // we will add "correct!" and green boxes
         } else console.log("bie") // we will add "incorrect:(" and red boxes
     }
@@ -99,4 +99,6 @@ function fillSquares() {
 window.onload = function() {
     fillSquares()
     checkWords() //delete later
+    console.log(getWord(0))
+    console.log(getWord(1))
 };
