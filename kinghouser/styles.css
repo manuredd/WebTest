@@ -4,14 +4,14 @@ body {
 
 #container {
     display: flex;
-    background-color: white;
+    background-color: var(--white);
     height: 100%;
     align-items: center;
     flex-direction: column;
 }
 
 .title {
-    color: black;
+    color: var(--black);
     font-size: 3.0rem;
     font-weight: bold;
     margin: 1.8rem 0 0.4rem 0;
@@ -40,12 +40,12 @@ body {
     background-color: var(--white);
     font-family: inherit;
     cursor: pointer;
-    border: 2px solid black;
+    border: 2px solid var(--black);
     min-width: 80px;
     min-height: 80px;
     font-size: 3rem;
     font-weight: bold;
-    color: black;
+    color: var(--black);
     text-transform: uppercase;
     justify-content: center;
     align-items: center;

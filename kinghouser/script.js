@@ -88,15 +88,18 @@ function removeItem(item) {
     localStorage.removeItem(item)
 }
 
-function fillSquares() {
+function prepSquares() {
     let letters = createPuzzle()
     for (let i = 1; i < 11; i++) {
         const square = document.getElementById(i.toString())
         square.innerText = letters[i - 1]
+        square.addEventListener("click", function() {
+            alert("hie")
+        }, false)
     }
 }
 
 window.onload = function() {
-    fillSquares()
+    prepSquares()
     checkWords() //delete later
 };
