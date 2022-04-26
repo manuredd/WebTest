@@ -1,11 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html,
 body {
-    height: 100%;
     font-family: "Rockwell", serif;
 }
 
@@ -17,21 +10,13 @@ body {
     flex-direction: column;
 }
 
-#game {
-    width: 100%;
-    max-width: 500px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
 .title {
     color: black;
     font-size: 3.0rem;
     font-weight: bold;
     margin: 1.8rem 0 0.4rem 0;
     text-align: center;
-    font-family: "Rockwell", serif;
+    font-family: inherit;
 }
 
 #board-container {
@@ -52,20 +37,20 @@ body {
 }
 
 .square {
-    border: 2px solid rgb(58, 58, 60);
+    background-color: var(--white);
+    font-family: inherit;
+    cursor: pointer;
+    border: 2px solid black;
     min-width: 80px;
     min-height: 80px;
     font-size: 3rem;
     font-weight: bold;
     color: black;
     text-transform: uppercase;
-
-    display: flex;
     justify-content: center;
-    align-items: flex-end;
-    /* "flex-end" works better than "center" for some reason*/
+    align-items: center;
 }
 
-.spacer-half {
-    flex-grow: 0.5;
+.square:hover {
+    background-color: var(--lightGray);
 }
