@@ -1,56 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: "Rockwell", serif;
+    background: var(--black);
 }
 
-#container {
-    display: flex;
-    background-color: var(--white);
-    height: 100%;
-    align-items: center;
-    flex-direction: column;
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("res/fonts/Bebas_Neue/BebasNeue-Regular.ttf");
 }
 
-.title {
-    color: var(--black);
-    font-size: 3.0rem;
-    font-weight: bold;
-    margin: 1.8rem 0 0.4rem 0;
+@font-face {
+    font-family: "Oswald";
+    src: url("res/fonts/Oswald/static/Oswald-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Oswald Bold";
+    src: url("res/fonts/Oswald/static/Oswald-Bold.ttf");
+}
+
+#game-container {
+    background: var(--black) center;
+    width: 100%;
+    height: 100vh;
+}
+
+#menu {
+    background: var(--black) center;
+    position: absolute;
+    width: 100%;
+    height: 5rem;
+}
+
+.menu-text {
+    font-size: 3.5rem;
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--white);
+    position: relative;
     text-align: center;
-    font-family: inherit;
+    padding: 1rem 0 0.5rem 0;
+    border-bottom: 1px solid var(--border-gray);
+    baseline-shift: 0;
 }
 
-#board-container {
+#game-board-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    overflow: hidden;
+    background: var(--black);
+    padding-top: 5rem;
 }
 
-#board {
+#game-board {
+    margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 15px;
-    grid-column-gap: 60px;
+    grid-gap: 10px;
     padding: 10px;
     box-sizing: border-box;
+    background: var(--black);
 }
 
 .square {
-    background-color: var(--white);
-    font-family: inherit;
-    cursor: pointer;
-    border: 2px solid var(--black);
-    min-width: 80px;
-    min-height: 80px;
-    font-size: 3rem;
-    font-weight: bold;
-    color: var(--black);
-    text-transform: uppercase;
+    width: 100px;
+    height: 100px;
+    text-decoration: none;
+    padding: 10px 10px;
+    font-size: 40px;
+    color: var(--white);
+    border: 2px solid var(--gray);
+    font-family: "Oswald Bold", sans-serif;
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.square:hover {
-    background-color: var(--lightGray);
+    background: var(--black);
 }
